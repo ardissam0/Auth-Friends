@@ -11,7 +11,6 @@ class Friends extends React.Component{
     }
 
     getFriends = () => {
-        const token = window.localStorage.getItem('token')
         axiosWithAuth().get("/api/friends")
         .then(response => {
             console.log(response);
