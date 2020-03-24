@@ -1,5 +1,17 @@
 import React from "react"
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import styled from 'styled-components';
+
+const EditStyles = styled.div`
+  background-color: #2F4F4F;
+  height: 100%;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 1.4rem;
+  border-bottom: 10px solid #FFDBB0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+`;
 
 class EditFriend extends React.Component {
     constructor() {
@@ -20,6 +32,7 @@ class EditFriend extends React.Component {
     render() {
         return (
             <div>
+                <EditStyles>
                 <form onSubmit={this.submitHandler}>
                     <input onChange={this.changeHandler} name="id" placeholder="ID" />
                     <input onChange={this.changeHandler} name="name" placeholder="Name" />
@@ -27,7 +40,7 @@ class EditFriend extends React.Component {
                     <input onChange={this.changeHandler} name="email" placeholder="Email" />
                     <button>EDIT</button>
                 </form>
-
+                </EditStyles>
             </div>
         )
     }

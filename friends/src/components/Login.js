@@ -1,5 +1,17 @@
 import React from "react"
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import styled from 'styled-components';
+
+const LoginStyles = styled.div`
+  background-color: #2F4F4F;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-bottom: 10px solid #FFDBB0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+`;
 
 class Login extends React.Component {
     constructor() {
@@ -39,11 +51,13 @@ class Login extends React.Component {
     render() {
         return (
             <div>
+                <LoginStyles>
                 <form onSubmit={this.handleSubmit}>
-                    <input name="username" onChange={this.handleChange}/>
-                    <input name="password" onChange={this.handleChange}/>
+                    <input name="username" onChange={this.handleChange} placeholder="Username"/>
+                    <input name="password" onChange={this.handleChange} placeholder="Password"/>
                     <button>LOGIN</button>
                 </form>
+                </LoginStyles>
                 {this.state.isLoading && <div>Login</div>}
             </div>
         )

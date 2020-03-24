@@ -11,20 +11,26 @@ import PrivateRoute from "./components/PrivateRoute"
 import styled from 'styled-components';
 
 const LinkStyles = styled.div`
-  text-decoration: none;
-
+  background-color: #2F4F4F;
+  height: 30px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-bottom: 10px solid #FFDBB0;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 `;
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <LinkStyles> 
-        <Link to='/login'>LOGIN</Link>
-        <Link to='/protected'>FRIENDS</Link>
-        <Link to='/add-friend'>ADD FRIENDS</Link>
-        <Link to='/edit-friend'>EDIT FRIENDS</Link>
-        <Link to='/delete-friend'>DELETE FRIEND</Link>
+        <LinkStyles>
+        <Link style={{color: "#FFDBB0", textDecoration: "none",}} to='/login'>LOGIN</Link>
+        <Link style={{color: "#FFDBB0", textDecoration: "none", marginLeft: "2.5%",}} to='/protected'>FRIENDS</Link>
+        <Link style={{color: "#FFDBB0", textDecoration: "none", marginLeft: "2.5%",}} to='/add-friend'>ADD</Link>
+        <Link style={{color: "#FFDBB0", textDecoration: "none", marginLeft: "2.5%",}} to='/edit-friend'>EDIT</Link>
+        <Link style={{color: "#FFDBB0", textDecoration: "none", marginLeft: "2.5%",}} to='/delete-friend'>DELETE</Link>
         </LinkStyles>
         <Switch>
           <Route path="/login" component={Login} /> 
