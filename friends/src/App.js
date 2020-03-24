@@ -20,12 +20,13 @@ function App() {
         <Link to='/delete-friend'>Delete Friend</Link>
 
         <Switch>
-          <PrivateRoute exact path='/add-friend' component={AddFriend} />
-          <PrivateRoute exact path='/delete-friend' component={DeleteFriend} />
+          <Route path="/login" component={Login} /> 
           <PrivateRoute exact path='/friends' component={Friends} />
+          <PrivateRoute exact path='/add-friend' component={AddFriend} />
           <PrivateRoute exact path='/edit-friend' component={EditFriend} />
-          <Route path="/login" component={Login} />
+          <PrivateRoute exact path='/delete-friend' component={DeleteFriend} />
         </Switch>
+        
       </Router>
     </div>
   );
