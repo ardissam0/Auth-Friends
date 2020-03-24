@@ -13,20 +13,20 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Link to='/login'>Login</Link>
-        <Link to='/friends'>Friends</Link>
-        <Link to='/add-friend'>Add Friend</Link>
-        <Link to='/edit-friend'>Edit Friend</Link>
-        <Link to='/delete-friend'>Delete Friend</Link>
+        <Link to='/login'>LOGIN</Link>
+        <Link to='/protected'>FRIENDS</Link>
+        <Link to='/add-friend'>ADD FRIENDS</Link>
+        <Link to='/edit-friend'>EDIT FRIENDS</Link>
+        <Link to='/delete-friend'>DELETE FRIEND</Link>
 
         <Switch>
           <Route path="/login" component={Login} /> 
-          <PrivateRoute exact path='/friends' component={Friends} />
+          <PrivateRoute exact path='/protected' component={Friends} />
           <PrivateRoute exact path='/add-friend' component={AddFriend} />
           <PrivateRoute exact path='/edit-friend' component={EditFriend} />
           <PrivateRoute exact path='/delete-friend' component={DeleteFriend} />
         </Switch>
-        
+
       </Router>
     </div>
   );

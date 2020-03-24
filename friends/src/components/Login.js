@@ -13,7 +13,8 @@ class Login extends React.Component {
         }
     }
     handleChange = event => {
-        this.setState( { credentials: {
+        this.setState({ 
+            credentials: {
             ...this.state.credentials,
             [event.target.name]: event.target.value
         }})
@@ -32,8 +33,8 @@ class Login extends React.Component {
             this.setState({...this.state, isLoading: false});
             this.props.history.push('/protected')
         })
-        .catch(error => console.log(error))
-    }
+        .catch(error => console.log(error.response));
+    };
 
     render() {
         return (
@@ -41,7 +42,7 @@ class Login extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <input name="username" onChange={this.handleChange}/>
                     <input name="password" onChange={this.handleChange}/>
-                    <button>Login</button>
+                    <button>LOGIN</button>
                 </form>
                 {this.state.isLoading && <div>Login</div>}
             </div>
