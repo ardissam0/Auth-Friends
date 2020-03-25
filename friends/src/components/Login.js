@@ -1,9 +1,10 @@
 import React from "react"
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import Loader from 'react-loader-spinner';
 import styled from 'styled-components';
 
 const LoginStyles = styled.div`
-  background-color: #2F4F4F;
+  background-color: #778899;
   height: 100%;
   width: 100%;
   font-weight: bold;
@@ -37,7 +38,7 @@ class Login extends React.Component {
         event.preventDefault();
         this.setState({...this.state, isLoading: true});
 
-        axiosWithAuth().post('/api/login', this.state.credentials)
+        axiosWithAuth().post('http://localhost:5000/api/login', this.state.credentials)
         .then(response => {
             console.log(response);
             window.localStorage.setItem('token', response.data.payload);
@@ -58,7 +59,7 @@ class Login extends React.Component {
                     <button>LOGIN</button>
                 </form>
                 </LoginStyles>
-                {this.state.isLoading && <div>Login</div>}
+                {this.state.isLoading && <Loader type="Bars" color="#FFDBB0" height="60" width="60" timeout={3000} />}
             </div>
         )
     }

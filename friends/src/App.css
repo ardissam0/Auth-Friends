@@ -1,8 +1,34 @@
+* {
+  background-color: #778899;
+}
+
 .App {
   text-align: center;
   justify-content: space-evenly;
   width: 100%;
+  background-color: #778899;
+
 }
 
+button {
+  border: 1.89px solid #FFDBB0;
+  background-color: #FFDBB0;
+  margin-left: 2px;
+  font-weight: bold;
+  color: #778899;
+}
+
+button:hover {
+  background-color: #778899;
+  color: #FFDBB0;
+}
+
+input {
+  border: 1.89px solid #FFDBB0;
+  background-color: #FFDBB0;
+  margin-left: 2px;
+  font-weight: bold;
+  color: #778899;
+}
 
 

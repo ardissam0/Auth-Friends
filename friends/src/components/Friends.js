@@ -3,12 +3,12 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 import styled from 'styled-components';
 
 const ListStyles = styled.div`
-  background-color: #2F4F4F;
+  background-color: #778899;
   height: 100%;
   font-weight: bold;
   font-size: 1.4rem;
   border-bottom: 10px solid #FFDBB0;
-  color: white;
+  color: #FFDBB0;
   text-align: left;
   padding-top: 2%;
   padding-bottom: 2%;

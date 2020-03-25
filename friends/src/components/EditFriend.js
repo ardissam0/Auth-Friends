@@ -3,7 +3,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import styled from 'styled-components';
 
 const EditStyles = styled.div`
-  background-color: #2F4F4F;
+  background-color: #778899;
   height: 100%;
   font-weight: bold;
   padding: 20px;
